@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3">
+    <TextView
+        android:id="@+id/tenNL"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên Nguyên Liệu"
+        android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/giaNL"
+        android:layout_below="@+id/tenNL"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Giá Nguyên liệu"
+        android:textSize="24sp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/soluong"
+                android:layout_below="@+id/donvi"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lượng"
+                android:textSize="24sp"/>
+    <TextView
+        android:id="@+id/donvi"
+        android:layout_below="@+id/giaNL"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đơn vị"
+        android:textSize="24sp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <ImageView
+        android:layout_weight="2"
+        android:id="@+id/nlimg"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
+        <ImageView
+            android:layout_weight="1"
+            android:id="@+id/delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/delete"/>
+    <ImageView
+        android:layout_weight="1"
+        android:id="@+id/edit"
+        android:layout_marginRight="0dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/pencil"/>
+
+
+    </LinearLayout>
+</LinearLayout>

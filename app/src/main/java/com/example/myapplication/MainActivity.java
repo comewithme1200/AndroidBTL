@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,6 +22,11 @@ public class MainActivity extends AppCompatActivity {
     ImageView image;
     TextView brandname, slogan;
 
+    @Override
+    public boolean moveSharedPreferencesFrom(Context sourceContext, String name) {
+        return super.moveSharedPreferencesFrom(sourceContext, name);
+    }
+
     @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         image = (ImageView) findViewById(R.id.imageView);
         brandname = (TextView) findViewById(R.id.brandname);
         slogan = (TextView) findViewById(R.id.Slogan);
-
+        //moveSharedPreferencesFrom(,"username");
         image.setAnimation(topanim);
         brandname.setAnimation(botanim);
         slogan.setAnimation(botanim);
